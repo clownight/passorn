@@ -103,7 +103,7 @@
 @section('script')
 <script>
     var logo = $(".navbar.change .logo> img");
-    logo.attr('src', window.location.origin + '/passorn/public/img/passorn-logo-black.png');
+    logo.attr('src', window.location.origin + '/img/passorn-logo-black.png');
 
 </script>
 @endsection
