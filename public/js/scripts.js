@@ -28,11 +28,11 @@ $(function () {
         if (bodyScroll > 300) {
 
             navbar.addClass("nav-scroll");
-            logo.attr('src', window.location.origin + '/passorn/public/img/passorn-logo-black.png');
+            logo.attr('src', window.location.origin + '/img/passorn-logo-black.png');
 
         } else {
             navbar.removeClass("nav-scroll");
-            logo.attr('src', window.location.origin + '/passorn/public/img/passorn-logo.png');
+            logo.attr('src', window.location.origin + '/img/passorn-logo.png');
         }
     });
 
