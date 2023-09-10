@@ -19,3 +19,5 @@ Route::get('about-us',[App\Http\Controllers\AboutController::class,'index'])->na
 Route::get('projects',[App\Http\Controllers\ProjectController::class,'index'])->name('projects');
 Route::get('contact-us',[App\Http\Controllers\ContactController::class,'index'])->name('contact');
 Route::get('project/{id}',[App\Http\Controllers\ProjectController::class,'detail'])->name('project_detail');
+Route::get('project_form',[App\Http\Controllers\ProjectController::class,'form'])->name('project_form');
+Route::post('project_form',[App\Http\Controllers\ProjectController::class,'insert'])->name('project_form.insert');

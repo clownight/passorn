@@ -217,52 +217,23 @@
 <section class="portfolio full-bg">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 col-md-6 cluom current" data-tab="tab-1">
+             @foreach ($houses as $key => $house)
+             <div class="col-lg-3 col-md-6 cluom current" data-tab="tab-{{$key}}">
                 <div class="info">
                     <h6 class="custom-font">House</h6>
-                    <h5>บ้านตัวอย่าง Minimal</h5>
+                    <h5>{{$house->name}}</h5>
                 </div>
                 <div class="more">
-                    <a href="{!! route('project_detail',['บ้านตัวอย่าง Minimal']) !!}">View Project <i class="fas fa-chevron-right"></i></a>
+                    <a href="{!! route('project_detail',$house->safe_id) !!}">View Project <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 cluom" data-tab="tab-2">
-                <div class="info">
-                    <h6 class="custom-font">House</h6>
-                    <h5>บ้านตัวอย่าง Luxury</h5>
-                </div>
-                <div class="more">
-                    <a href="{!! route('project_detail',['บ้านตัวอย่าง Luxury']) !!}">View Project <i class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 cluom" data-tab="tab-3">
-                <div class="info">
-                    <h6 class="custom-font">House</h6>
-                    <h5>ภาพและ 3D ภัสสรหาด (ปึกเตียน)</h5>
-                </div>
-                <div class="more">
-                    <a href="{!! route('project_detail',['ภาพและ 3D ภัสสรหาด (ปึกเตียน)']) !!}">View Project <i class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 cluom" data-tab="tab-4">
-                <div class="info">
-                    <h6 class="custom-font">House</h6>
-                    <h5>ภาพและ 3D ภัสสรหาด (ภูเก็ตป่าคลอก)</h5>
-                </div>
-                <div class="more">
-                    <a href="{!! route('project_detail',['ภาพและ 3D ภัสสรหาด (ภูเก็ตป่าคลอก)']) !!}">View Project <i class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
+             @endforeach
         </div>
     </div>
     <div class="glry-img">
-        <div id="tab-1" class="bg-img tab-img current" data-background="img/house/1689746570702.jpg" data-overlay-dark="2"></div>
-        <div id="tab-2" class="bg-img tab-img" data-background="img/house/1689746567404.jpg" data-overlay-dark="2">
-        </div>
-        <div id="tab-3" class="bg-img tab-img" data-background="img/house/001/001/3D/01.jpg" data-overlay-dark="2">
-        </div>
-        <div id="tab-4" class="bg-img tab-img" data-background="img/house/002/002/3D/01.jpg" data-overlay-dark="2">
-        </div>
+        @foreach ($houses as $key => $house)
+        <div id="tab-{{$key}}" class="bg-img tab-img current" data-background="{{$house->cover}}" data-overlay-dark="2"></div>
+        @endforeach
     </div>
 </section>
 

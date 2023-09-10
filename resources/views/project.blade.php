@@ -38,59 +38,21 @@
 
                 <!-- gallery -->
                 <div class="gallery twsty inf-lit full-width">
-
-                    <!-- gallery item -->
-                    <div class="items house poolvilla three-column wow animated mt-50" data-wow-delay=".7s">
-                        <div class="item-img bg-img" data-background="{!! asset('img/house/bg1.jpg') !!}">
-                            <a href="{!! route('project_detail',['บ้านตัวอย่าง Minimal']) !!}">
-                                <div class="item-img-overlay"></div>
-                            </a>
+                    @foreach ($houses as $project)
+                        <!-- gallery item -->
+                        <div class="items house poolvilla
+                        three-column wow fadeInUp mt-50" data-wow-delay=".7s">
+                            <div class="item-img bg-img" data-background="{{ asset($project->cover) }}">
+                                <a href="{!! route('project_detail',$project->safe_id) !!}">
+                                    <div class="item-img-overlay"></div>
+                                </a>
+                            </div>
+                            <div class="info mt-10">
+                                <h5>{{$project->name}}</h5>
+                                <span>{{$project->location}}</span>
+                            </div>
                         </div>
-                        <div class="info mt-10">
-                            <h5>บ้านตัวอย่าง Minimal</h5>
-                            <span>Pool Villa</span>
-                        </div>
-                    </div>
-
-                    <!-- gallery item -->
-                    <div class="items house three-column wow fadeInUp mt-50" data-wow-delay=".7s">
-                        <div class="item-img bg-img" data-background="{!! asset('img/house/bg2.jpg') !!}">
-                            <a href="{!! route('project_detail',['บ้านตัวอย่าง Luxury']) !!}">
-                                <div class="item-img-overlay"></div>
-                            </a>
-                        </div>
-                        <div class="info mt-10">
-                            <h5>บ้านตัวอย่าง Luxury</h5>
-                            <span>House</span>
-                        </div>
-                    </div>
-
-                    <!-- gallery item -->
-                    <div class="items house poolvilla three-column wow fadeInUp mt-50" data-wow-delay=".7s">
-                        <div class="item-img bg-img" data-background="{!! asset('img/house/001/001/3D/01.jpg') !!}">
-                            <a href="{!! route('project_detail',['ภาพและ 3D ภัสสรหาด (ปึกเตียน)']) !!}">
-                                <div class="item-img-overlay valign"></div>
-                            </a>
-                        </div>
-                        <div class="info mt-10">
-                            <h5>ภาพและ 3D ภัสสรหาด (ปึกเตียน)</h5>
-                            <span>Pool Villa</span>
-                        </div>
-                    </div>
-
-                    <!-- gallery item -->
-                    <div class="items house three-column wow fadeInUp mt-50" data-wow-delay=".7s">
-                        <div class="item-img bg-img" data-background="{!! asset('img/house/002/002/3D/01.jpg') !!}">
-                            <a href="{!! route('project_detail',['ภาพและ 3D ภัสสรหาด (ภูเก็ตป่าคลอก)']) !!}">
-                                <div class="item-img-overlay valign"></div>
-                            </a>
-                        </div>
-                        <div class="info mt-10">
-                            <h5>ภาพและ 3D ภัสสรหาด (ภูเก็ตป่าคลอก)</h5>
-                            <span>House</span>
-                        </div>
-                    </div>
-
+                    @endforeach
 
                 </div>
 
