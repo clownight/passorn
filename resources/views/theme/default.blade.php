@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="keywords" content="HTML5 Template Archo onepage themeforest" />
-    <meta name="description" content="Archo - Onepage Multi-Purpose HTML5 Template" />
+    <meta name="description" content="ภายใต้การฟอร์มทีมของผู้บริหาร บริษัท อินเตอร์พูลสปา จำกัด จากการสั่งสม ประสบการณ์ยาวนานกว่า20ปีบนถนนธุรกิจอสังหาริมทรัพย์และสระว่ายน้ำ โครงการ ภัสสร พลูวิลล่า (Passorn Pool Villa) จึงถือกำเนิดขึ้นและยังได้รับการตอบรับอย่างท่วมท้น อีกทั้งยังเป็นโครงการที่ผู้บริโภคให้ความไว้วางใจในด้านคุณภาพ การออกแบบ" />
     <meta name="author" content="" />
 
     <!-- Title  -->
